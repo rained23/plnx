@@ -79,9 +79,9 @@ let queue = async.queue(({ cfg, command, options }, cb) => {
     if (err) {
       cb(err)
     } else if (res.statusCode !== 200) {
-      cb(`statusCode ${res.statusCode}`)
+      cb(`statusCode ${res.statusCode}`, data)
     } else if (data && data.error) {
-      cb(data.error)
+      cb(data.error, data)
     } else {
       cb(null, data)
     }
