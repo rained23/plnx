@@ -104,8 +104,9 @@ for (let command in config.commands) {
 // fix poloniex api docs
 exports.return24Volume = exports.return24hVolume
 
-exports.push = (onopen) => {
+exports.push = (onopen, onclose) => {
   let conn = new autobahn.Connection({ url: config.urls.push, realm: 'realm1' })
   conn.onopen = onopen
+  conn.onclose = onclose
   conn.open()
 }
