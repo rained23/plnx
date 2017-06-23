@@ -21,7 +21,7 @@
   "main": "lib",
   "dependencies": {
     "async": "^2.0.1",
-    "autobahn": "^0.9.9",
+    "autobahn": "^0.x.x",
     "debug": "^2.2.0",
     "lodash": "^4.6.1",
     "request": "^2.69.0"
